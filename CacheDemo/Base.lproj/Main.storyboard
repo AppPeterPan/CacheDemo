@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JXx-fv-8Xr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15702"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movie Table View Controller-->
+        <scene sceneID="u32-Sa-qFB">
+            <objects>
+                <tableViewController id="JXx-fv-8Xr" customClass="MovieTableViewController" customModule="CacheDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Ui-Tp-OzR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieTableViewCell" id="vAc-7W-Xhf" customClass="MovieTableViewCell" customModule="CacheDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="120.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vAc-7W-Xhf" id="srw-cH-r46">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="120.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="1yj-Qb-uXR">
+                                            <rect key="frame" x="10" y="10" width="394" height="100.5"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="film" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OZ9-Fx-gMg">
+                                                    <rect key="frame" x="0.0" y="1.5" width="100" height="97.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="OZ9-Fx-gMg" secondAttribute="height" multiplier="1:1" id="tGU-zh-WAQ"/>
+                                                        <constraint firstAttribute="width" constant="100" id="udI-vE-Vux"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EmK-eP-eic">
+                                                    <rect key="frame" x="121" y="40" width="273" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="1yj-Qb-uXR" secondAttribute="bottom" constant="10" id="0M6-W3-yw4"/>
+                                        <constraint firstItem="1yj-Qb-uXR" firstAttribute="leading" secondItem="srw-cH-r46" secondAttribute="leading" constant="10" id="KsZ-59-dgP"/>
+                                        <constraint firstItem="1yj-Qb-uXR" firstAttribute="top" secondItem="srw-cH-r46" secondAttribute="top" constant="10" id="XeU-an-OhM"/>
+                                        <constraint firstAttribute="trailing" secondItem="1yj-Qb-uXR" secondAttribute="trailing" constant="10" id="jEp-jH-Lkj"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="EmK-eP-eic" id="ajA-1a-OMz"/>
+                                    <outlet property="photoImageView" destination="OZ9-Fx-gMg" id="Tl5-fo-SYo"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="JXx-fv-8Xr" id="viN-Lf-hfM"/>
+                            <outlet property="delegate" destination="JXx-fv-8Xr" id="Yaa-Xx-Rwg"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ugp-8U-lfp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="711.59420289855075" y="70.982142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="film" catalog="system" width="64" height="46"/>
+    </resources>
+</document>
